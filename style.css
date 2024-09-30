@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+/* Universal styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.8em;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px;
+    transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 2em;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Home Section */
+.home-section {
+    background: url('tarun8.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.home-content {
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.home-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    color: #ffccf9;
+    font-weight: 500;
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    color: #ff6f91;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.about-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 1.3rem;
+    color: #2c2c54;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-text p::first-letter {
+    font-size: 2rem;
+    color: #ff6f91;
+    font-weight: bold;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 60px 20px;
+    background-color: #e1bee7;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    color: #ff6f91;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    justify-items: center;
+}
+
+.skill-card {
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    width: 100%;
+    max-width: 320px;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+.skill-card:hover img {
+    transform: scale(1.1);
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff6f91;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    font-size: 1rem;
+    color: #546e7a;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+    background: url('tarun1.jpg') no-repeat center center/cover;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-section form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ffccf9;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #ff5c93;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .skill-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+
+    .about-section h2,
+    .skills-section h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p,
+    .skill-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact-section form {
+        padding: 20px;
+    }
+}

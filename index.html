@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarun Sharma Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">MY CODECRAFT</div>
+            <div class="hamburger" onclick="toggleMenu()">
+                &#9776;  <!-- Hamburger Icon -->
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <div class="home-content">
+            <h1>Welcome to my Portfolio</h1>
+            <p>Hey, I'm Tarun Sharma, a web wizard crafting magic with HTML, CSS, and diving into JavaScript!</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="tarun11.jpg" alt="Profile Picture" class="about-image">
+            <div class="about-text">
+                <p>Hi, I’m Tarun Sharma — a web developer and digital alchemist with a flair for
+                     turning ideas into captivating digital worlds.
+                    With a solid foundation in HTML and CSS, and a growing mastery of JavaScript,
+                     I craft seamless, eye-catching experiences.
+                     I thrive on creativity, collaboration, 
+                    and the constant pursuit of innovation. Let’s build something that not only works but inspires!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2>Skillset Showcase</h2>
+        <div class="skill-grid">
+            <div class="skill-card">
+                <img src="tarun3.jpg" alt="Mobile Development">
+                <h3>Mobile development</h3>
+                <p>As a budding mobile app developer, I'm passionate about creating engaging and
+                     user-friendly experiences. Currently diving into the fundamentals of mobile development, 
+                     I'm eager to leverage my frontend expertise to build functional, innovative apps that make an impact!</p>
+            </div>
+            <div class="skill-card">
+                <img src="tarun4.jpg" alt="Web Development">
+                <h3>Web development</h3>
+                <p>I’m a frontend developer with a solid grasp of HTML and CSS, now focusing on honing my JavaScript skills. 
+                    My goal is to craft dynamic,
+                     visually stunning web applications that deliver seamless user experiences and bring creative ideas to life!</p>
+            </div>
+            <div class="skill-card">
+                <img src="tarun5.jpg" alt="Graphic Designing">
+                <h3>Graphic Designing</h3>
+                <p>I’m a graphic designer with a passion for creating visually striking designs that speak volumes. 
+                    By blending creativity with functionality,
+                     I craft designs that are not only eye-catching but also communicate clear, powerful messages that resonate with the audience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Script for Hamburger Menu -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>
